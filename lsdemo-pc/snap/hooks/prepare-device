@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -eu
+
+exec >> $SNAP_COMMON/prepare-device-hook.log 2>&1
+
+# Pick a four digit humber
+snapctl set registration.proposed-serial="\"$(shuf -i 1000-9999 -n 1)\""
+
+# Use the new model service instead of the serial vault.
+snapctl set device-service.url="https://api.snapcraft.io/v1/"
+snapctl set device-service.headers="{\"api-key\": \"RbrGUhNhuKtCsrfoE3jiR594aZKiUw2e4ky1pcXHxZEkwZGy1p\"}"

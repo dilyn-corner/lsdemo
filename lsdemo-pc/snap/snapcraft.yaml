@@ -1,0 +1,36 @@
+name: iotdevice-lsdemo-pc
+adopt-info: pc
+type: gadget
+base: core24
+license: "CC-BY-SA-4.0 AND GPL-3.0-or-later"
+website: https://gnu.org/software/grub
+contact: iot-field@lists.canonical.com
+# TBD issues: https://github.com/dilyn-corner/pc-gadget/issues
+# TBD source-code: https://github.com/dilyn-corner/pc-gadget
+# TBD summary + description
+summary: PC gadget for generic devices
+description: |
+  This gadget enables generic pc devices to work with Ubuntu Core
+confinement: strict
+grade: stable
+
+# Min version to support shim 15.7
+assumes:
+  - snapd2.63
+
+parts:
+  pc:
+    plugin: nil
+    stage-snaps: [pc/24/stable]
+    override-stage: |
+      craftctl default
+
+      # Grab the grub2 package version, hopefully. Probably.
+      craftctl set version="$(strings grubx64.efi | grep -i Ubuntu,grub2|cut -d, -f5)"
+    stage:
+      - boot.csv
+      - fb.efi
+      - grub.conf
+      - grubx64.efi
+      - shim.efi.signed
+      - usr/share/doc/
