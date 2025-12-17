@@ -1,0 +1,90 @@
+{
+    "type": "model",
+    "series": "16",
+    "model": "ls-demo",
+    "display-name": "Ubuntu Core 24 Landscape Demo Device",
+    "architecture": "amd64",
+    "authority-id": "SgO2EXiK2bwgtciB1mNjMYM6zcljwXZt",
+    "brand-id": "SgO2EXiK2bwgtciB1mNjMYM6zcljwXZt",
+    "store": "tahyee7nejoRie1Xohyo",
+    "timestamp": "2025-12-01T12:00:00+00:00",
+    "base": "core24",
+    "grade": "dangerous",
+    "system-user-authority": [
+        "cHcxHFRxgHBseRyUpLXtu6amXHgPyFQc"
+    ],
+    "snaps": [
+        {
+            "name": "iotdevice-lsdemo-pc",
+            "type": "gadget",
+            "default-channel": "24/edge",
+            "id": "LnpGAPuDA8VkJtxV4BbFMnOHMqZTifql"
+        },
+        {
+            "name": "pc-kernel",
+            "type": "kernel",
+            "default-channel": "24-hwe/stable",
+            "id": "pYVQrBcKmBa0mZ4CCN7ExT6jH8rY1hza"
+        },
+        {
+            "name": "core24",
+            "type": "base",
+            "default-channel": "latest/stable",
+            "id": "dwTAh7MZZ01zyriOZErqd1JynQLiOGvM"
+        },
+        {
+            "name": "snapd",
+            "type": "snapd",
+            "default-channel": "latest/stable",
+            "id": "PMrrV4ml8uWuEUDBT8dSGnKUYbevVhc4"
+        },
+        {
+            "name": "landscape-client",
+            "type": "app",
+            "default-channel": "24/stable",
+            "id": "ffnH0sJpX3NFAclH777M8BdXIWpo93af"
+        },
+        {
+            "name": "core22",
+            "type": "base",
+            "default-channel": "latest/stable",
+            "id": "amcUKQILKXHHTlmSa7NMdnXSx02dNeeT"
+        },
+        {
+            "name": "dilyn-jellyfin-ffmpeg",
+            "type": "app",
+            "default-channel": "latest/edge",
+            "id": "pr6XSUxXxkIz6JMhvYlpe5E8UGhgyfnS"
+        },
+        {
+            "name": "dilyn-jellyfin",
+            "type": "app",
+            "default-channel": "latest/edge",
+            "id": "yValkNjy9WPIq8nUOB3VXGew2CP2Tgsj"
+        },
+        {
+            "name": "dilyn-valkey",
+            "type": "app",
+            "default-channel": "latest/edge",
+            "id": "4BqExISm4BJoSpSr6GW2kvhZP3IkfCdC"
+        },
+        {
+            "name": "dilyn-postgresql",
+            "type": "app",
+            "default-channel": "latest/edge",
+            "id": "40tEv8Y8tLtaclQroK7yUWw4VbVkdSoM"
+        },
+        {
+            "name": "dilyn-immich",
+            "type": "app",
+            "default-channel": "latest/edge",
+            "id": "ISHUD4ohMh9Ih45FXcYkLYkRvKpkfNRl"
+        },
+        {
+            "name": "console-conf",
+            "type": "app",
+            "default-channel": "24/stable",
+            "id": "ASctKBEHzVt3f1pbZLoekCvcigRjtuqw"
+        }
+    ]
+}
